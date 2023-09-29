@@ -7,8 +7,7 @@ class Solution {
             
             if (n % yaksu == 0) {
                 answer += yaksu; 
-            }
-            
+            }    
             yaksu--;
         }
         
