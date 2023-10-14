@@ -7,7 +7,10 @@ def solution(n, wires):
         sub = [v for idx, v in enumerate(wires) if idx != i]
         
         s = set(sub[0])
-        [s.update(v) for _ in sub for v in sub if set(v) & s]  
+        for j in range(len(sub)):
+            for k in sub:
+                if set(v) & k:
+                    s.update(k)
         answer = min(answer, abs(2 * len(s) - n))
         
     return answer
