@@ -44,26 +44,26 @@ def solution(numbers, target):
 #     return answer
 
 
-# BFS 활용하기
-from collections import deque
+# # BFS 활용하기
+# from collections import deque
 
-def solution(numbers, target):
-    answer = 0
-    n = len(numbers) - 1
+# def solution(numbers, target):
+#     answer = 0
+#     n = len(numbers) - 1
     
-    queue = deque()
-    queue.append([numbers[0], 0]) # 양의 값과 idx
-    queue.append([numbers[0] * -1, 0]) # 음의 값과 idx
+#     queue = deque()
+#     queue.append([numbers[0], 0]) # 양의 값과 idx
+#     queue.append([numbers[0] * -1, 0]) # 음의 값과 idx
     
-    while queue:
-        value, idx = queue.popleft()
+#     while queue:
+#         value, idx = queue.popleft()
         
-        if n == idx:
-            # 끝까지 더하고 뺐으므로, 타겟과 비교하기
-            if target == value:
-                answer += 1
-        else:
-            queue.append([value + numbers[idx+1], idx+1])
-            queue.append([value - numbers[idx+1], idx+1])
+#         if n == idx:
+#             # 끝까지 더하고 뺐으므로, 타겟과 비교하기
+#             if target == value:
+#                 answer += 1
+#         else:
+#             queue.append([value + numbers[idx+1], idx+1])
+#             queue.append([value - numbers[idx+1], idx+1])
     
-    return answer
+#     return answer

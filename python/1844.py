@@ -40,3 +40,38 @@ def solution(maps):
     
     answer = bfs(0, 0)
     return -1 if answer == 1 else answer
+
+
+# try 2
+# bfs 문제 
+# from collections import deque
+
+# # 상하좌우
+# dx = [0, 0, -1, 1]
+# dy = [1, -1, 0, 0]
+
+# def solution(maps):
+#     answer = 0
+    
+#     n = len(maps) # 높이
+#     m = len(maps[0]) # 폭
+    
+#     def bfs(x, y):
+#         queue = deque()
+#         queue.append((x,y))
+        
+#         while queue:
+#             px, py = queue.popleft() # 이전 좌표 좌표
+            
+#             for i in range(4):
+#                 nx, ny = px + dx[i], py+ dy[i]
+                     
+#                 if 0 <= nx < n and 0 <= ny < m and maps[nx][ny] == 1: # 처음 지나가는 유효한 길.
+#                     maps[nx][ny] = maps[px][py] + 1
+#                     queue.append((nx,ny))
+        
+#         return maps[n-1][m-1]
+    
+    
+#     answer = bfs(0, 0)
+#     return -1 if answer == 1 else answer
