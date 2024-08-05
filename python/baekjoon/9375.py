@@ -15,12 +15,7 @@ for _ in range(T):
             closet[type] = 1
         else: 
             closet[type] += 1
-
-    # 의상의 종류가 1개일때            
-    if len(closet) == 1:
-        print(n)
-        continue
-            
+                        
     # dict를 순환한다.
     mul = 1
     for c in closet:
