@@ -44,5 +44,3 @@ for y in range(M):
 print(len(answer))
 for i in sorted(answer):
     print(i, end=' ')
-        
-    
